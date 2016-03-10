@@ -1,0 +1,43 @@
+#main-holder, #cat-holder{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+h3 {
+  margin: 0.25rem auto 0.25rem auto;
+}
+
+.brand {
+  display: flex;
+  flex-basis: 20%;
+  flex-shrink: 0;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bolder;
+  margin-left: 2%;
+}
+
+.type, .breeds {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+
+.info-head {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.info {
+  padding: 0;
+  margin: 0;
+}
