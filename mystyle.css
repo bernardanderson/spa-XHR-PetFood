@@ -1,13 +1,14 @@
-#main-holder {
+#main-holder, #cat-holder{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  margin-bottom: 2rem;
+  align-items: flex-start;
 }
 
 h3 {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0.25rem auto 0.25rem auto;
 }
 
 .brand {
@@ -20,22 +21,23 @@ h3 {
   margin-left: 2%;
 }
 
-.type {
+.type, .breeds {
   display: flex;
   flex-direction: column;
   font-weight: bold;
   border: 1px solid black;
   justify-content: center;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
-.volume {
-  padding-bottom: 2%
+
+.info-head {
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
-.type-price {
-  flex-basis: 65%;
-  flex-shrink: 0;
-  justify-content: center;
+.info {
+  padding: 0;
+  margin: 0;
 }
-

@@ -1,25 +1,32 @@
 var dogfoodObject;
+var catfoodObject;
 
 // Parses the pet food from the received JSON file
 function parseDogfood() {
   dogfoodObject = JSON.parse(this.responseText);
-    buildElementsFirstJson(dogfoodObject);
+  buildElementsDogFood(dogfoodObject);
 }
 
-//Tells you if an error happens
-function anError(xhrFailureEvent) {
-  console.log("An error occured while transferring the data");
+function parseCatfood() {
+  catfoodObject = JSON.parse(this.responseText);
+  buildElementsCatFood(catfoodObject);
 }
 
 //Starts the XHR for the dogfood
 function XHRDogfood() {
-
   var requestDogfood = new XMLHttpRequest();
   requestDogfood.addEventListener("load", parseDogfood);
-  requestDogfood.addEventListener("error", anError);
   requestDogfood.open("GET", "dogfood.json");
   requestDogfood.send();
+}
 
+//Starts the XHR for the catfood
+function XHRCatfood() {
+  var requestCatfood = new XMLHttpRequest();
+  requestCatfood.addEventListener("load", parseCatfood);
+  requestCatfood.open("GET", "catfood.json");
+  requestCatfood.send();
 }
 
 XHRDogfood();
+XHRCatfood();
